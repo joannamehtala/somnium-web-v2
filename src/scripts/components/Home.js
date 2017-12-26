@@ -1,16 +1,19 @@
-import DataStore from 'flux/stores/DataStore.js'
+import React from 'react';
+import styled from 'styled-components';
+import DataStore from '../flux/stores/DataStore';
 
-class Home extends React.Component {
-    render() {
-        let allData = DataStore.getAll();
-        console.log(allData); 
+const Home = () => {
+  const allData = DataStore.getAll();
+  console.log(allData);
+  return (
+    <HomeWrapper>
+      <h1>Home page</h1>
+    </HomeWrapper>
+  );
+};
 
-        return (
-            <div>
-                <h2>Hello world!</h2>
-            </div>
-        );
-    }
-}
+const HomeWrapper = styled.div`
+  width: 100%;
+`;
 
 export default Home;
