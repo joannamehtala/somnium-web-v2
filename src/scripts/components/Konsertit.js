@@ -5,7 +5,6 @@ import DataStore from '../flux/stores/DataStore';
 const Konsertit = (props) => {
   const page = DataStore.getPageBySlug(props.slug);
   const acf = page.acf;
-  console.log(page);
   return (
     <Content>
       <span>{page.content.rendered}</span>

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import styled from 'styled-components';
 import DataStore from "flux/stores/DataStore.js";
 
 class Header extends React.Component {
@@ -11,7 +12,7 @@ class Header extends React.Component {
     ]); // Sort pages by order
 
     return (
-      <div className="header">
+      <Nav>
         <Link to="/" style={{ marginRight: "10px" }}>
           Home
         </Link>
@@ -29,9 +30,14 @@ class Header extends React.Component {
             );
           }
         })}
-      </div>
+      </Nav>
     );
   }
 }
+
+const Nav = styled.div`
+  width: 100%;
+  overflow: hidden;
+`;
 
 export default Header;
