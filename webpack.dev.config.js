@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = {
   devtool: 'cheap-module-source-map',
@@ -54,6 +55,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new BundleAnalyzerPlugin(),
     new webpack.HotModuleReplacementPlugin(), // Hot reloading
     new webpack.NoEmitOnErrorsPlugin(), // Webpack will let you know if there are any errors
 
