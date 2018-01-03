@@ -44,7 +44,7 @@ const Page = props => {
 
   const titleStyles = {
     backgroundColor: acf.theme_color
-  }
+  };
 
   return (
     <PageWrapper>
